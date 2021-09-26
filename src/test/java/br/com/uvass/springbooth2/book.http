@@ -1,0 +1,42 @@
+POST http://localhost:8080/book
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 500,
+  "title": "TEST",
+  "author": "TEST",
+  "publisher": "TEST",
+  "relaseDate": "TEST",
+  "isbn": "123456789",
+  "topic": "Java"
+}
+
+###
+GET http://localhost:8080/book
+Accept: application/json
+
+###
+
+GET http://localhost:8080/book/2
+Accept: application/json
+
+###
+
+PUT http://localhost:8080/book/2
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "TEST",
+  "author": "TEST",
+  "publisher": "TEST",
+  "relaseDate": "TEST",
+  "isbn": "123456789",
+  "topic": "Java"
+}
+
+###
+
+DELETE http://localhost:8080/book/3
+Accept: application/json
