@@ -28,7 +28,7 @@ public class ProdutoRepository {
     }
 
 
-    public ArrayList<Produto> buscarPeloFiltro(String nome, Float valorMinimo, Float valorMaximo) throws Exception {
+    public ArrayList<Produto> buscarProdutoPorFiltro(String nome, Float valorMinimo, Float valorMaximo) throws Exception {
         String sql = "SELECT * FROM PRODUTO WHERE nome = ? AND valorUnitario >= ? AND valorUnitario <= ?";
         ArrayList<Produto> buscar = (ArrayList<Produto>) jdbcTemplate.query(sql, new Object[]{nome, valorMinimo, valorMaximo}, new ProdutoMapper());
 

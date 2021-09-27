@@ -52,7 +52,7 @@ public class CategoriaRepository {
         throw new Exception("Não encontramos nenhuma categoria com este ID.");
     }
 
-    public List<Produto> buscarProdutosCategoria(Integer id, String nome, Float valorMinimo, Float valorMaximo) {
+    public List<Produto> buscarProdutosPorCategoria(Integer id, String nome, Float valorMinimo, Float valorMaximo) {
         if (nome == null && valorMinimo == null && valorMaximo == null) {
             return jdbcTemplate.query(
                     "select p.*, pc.categoriaId FROM produto p INNER JOIN produtoCategoria pc ON pc.produtoId = p.id WHERE pc.categoriaId = ?",
